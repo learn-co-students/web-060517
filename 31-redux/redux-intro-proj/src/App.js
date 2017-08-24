@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Auth from './services/authorize'
-import { connect } from 'react-redux'
 import { FormGroup, FormControl } from 'react-bootstrap'
 import 'semantic-ui-css/semantic.min.css'
 import { List } from 'semantic-ui-react'
@@ -81,17 +78,4 @@ class App extends Component {
 }
 
 
-const mapStateToProps = (state) => {
-  console.log(state)
-  return { todos: state.todos}
-}
-
-
-
-const mapDispatchToProps = (dispatch) => {
-  console.log(dispatch)
-  return {}
-
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;
