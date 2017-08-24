@@ -5,8 +5,8 @@ Group Members: Johann
 [Back End](https://github.com/johannkerr/catsrightmeowapi)  
 
 Group Members: Sarah and Jason  
-[Front End] (https://github.com/tsengsational/story-jam-client)  
-[Back End] (https://github.com/n3m3sis42/story-jam-api)  
+[Front End](https://github.com/tsengsational/story-jam-client)  
+[Back End](https://github.com/n3m3sis42/story-jam-api)  
 
 Group Members: Alex S | Peter P. | Charles W.  
 [Front End](https://github.com/peterpapadim/instalytics-fe)   
