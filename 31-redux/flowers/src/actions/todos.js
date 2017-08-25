@@ -1,15 +1,15 @@
-
-///THINGS TO NOTE
-// ACTions are pure functions
-// must return an object
-
-function addTodo(todo) {
+export function addTodo(task) {
   return {
     type: "ADD_TODO",
-    todo: todo
+    todo: task
   }
-
 }
 
 
-export default addTodo
+export function removeTodo(task) {
+  console.log("Remove some Todos")
+  return {
+    type: "REMOVE_TODO",
+    todo: task
+  }
+}

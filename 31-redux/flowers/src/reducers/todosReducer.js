@@ -1,25 +1,14 @@
-// A reducer is a pure function
-// It takes in state and action and will return some new information
-// Assume that the action coming in is "ADD_TODO"
-
-/// state = [] OR state = { todos: [], }
-function todoReducer(state = [1,2,3,4,5,6], action) {
-
+function todoReducer(state = {todos: ["Wash Dishes", "Iron Clothes"], selectedTodo: "", beef: "steak"}, action) {
   switch (action.type) {
-    case "ADD_TODO":
-      return [...state, action.todo]
-    case "REMOVE_TODO":
-      const newState = state.filter((element) => {
-        return element != action.todo
-      })
-      return newState
+    case 'ADD_TODO':
+      return Object.assign({}, state, {todos:[...state.todos, action.todo]})
+    case 'REMOVE_TODO':
+
+      const indexToFind = state.todos.findIndex((element) => element === action.todo)
+      return Object.assign({}, state, {todos:[...state.todos.slice(0, indexToFind), ...state.todos.slice(indexToFind + 1)]})
     default:
-    console.log("YOU MESSED UP SON")
       return state
   }
-
-
 }
-
 
 export default todoReducer
