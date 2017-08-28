@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Icon, Image, Rating, Button, Item, Label } from 'semantic-ui-react'
+import { Icon, Rating, Item } from 'semantic-ui-react'
 
 class BookCard extends React.Component {
 
@@ -10,11 +10,11 @@ class BookCard extends React.Component {
 
 
   render() {
-    const title = typeof this.props.volumeInfo.title != "undefined" ? this.props.volumeInfo.title : ""
-    const authors = typeof this.props.volumeInfo.authors != "undefined" ? this.props.volumeInfo.authors : ""
-    const description = typeof this.props.volumeInfo.description != "undefined" ? this.props.volumeInfo.description : ""
-    const imageLinks = typeof this.props.volumeInfo.imageLinks != "undefined" ? this.props.volumeInfo.imageLinks : ""
-    const averageRating = typeof this.props.volumeInfo.averageRating != "undefined" ? this.props.volumeInfo.averageRating : 0
+    const title = typeof this.props.volumeInfo.title !== "undefined" ? this.props.volumeInfo.title : ""
+    const authors = typeof this.props.volumeInfo.authors !== "undefined" ? this.props.volumeInfo.authors : ""
+    const description = typeof this.props.volumeInfo.description !== "undefined" ? this.props.volumeInfo.description : ""
+    const imageLinks = typeof this.props.volumeInfo.imageLinks !== "undefined" ? this.props.volumeInfo.imageLinks : ""
+    const averageRating = typeof this.props.volumeInfo.averageRating !== "undefined" ? this.props.volumeInfo.averageRating : 0
     return (
 
         <Item>

@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import { FormGroup, FormControl } from 'react-bootstrap'
 import 'semantic-ui-css/semantic.min.css'
-import { List } from 'semantic-ui-react'
-import { Icon, Grid, Item, Label } from 'semantic-ui-react'
+import { Grid } from 'semantic-ui-react'
 import Menu from './components/Menu'
-import GoogleBooks from "./services/googleBooksApi"
-import BookCard from './components/BookCard'
+import GoogleBooks from './services/googleBooksApi'
 import BookList from './components/BookList'
 import BookDetail from './components/BookDetail'
 
@@ -65,7 +62,7 @@ class App extends Component {
           </Grid.Column>
           <Grid.Column width={6}>
             <Grid.Row>
-              {this.state.selectedBook.title ? <BookDetail inCart={this.state.booksInCart.filter((e) => e.title == this.state.selectedBook).length > 0} {...this.state.selectedBook} addToCart={this.handleAddToCart}/> : null}
+              {this.state.selectedBook.title ? <BookDetail inCart={this.state.booksInCart.filter((e) => e.title === this.state.selectedBook).length > 0} {...this.state.selectedBook} addToCart={this.handleAddToCart}/> : null}
             </Grid.Row>
           </Grid.Column>
         </Grid>

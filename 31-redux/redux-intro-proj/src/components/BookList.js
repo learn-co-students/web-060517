@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon, Grid, Item, Label } from 'semantic-ui-react'
+import { Item } from 'semantic-ui-react'
 import BookCard from './BookCard'
 
 const BookList = ({ books, addBook }) => {

@@ -4,11 +4,11 @@ import { Card, Image, Icon, Rating } from 'semantic-ui-react'
 
 
 const BookDetail = (props) => {
-  const title = typeof props.title != "undefined" ? props.title : ""
-  const authors = typeof props.authors != "undefined" ? props.authors : ""
-  const description = typeof props.description != "undefined" ? props.description : ""
-  const imageLinks = typeof props.imageLinks != "undefined" ? props.imageLinks : ""
-  const averageRating = typeof props.averageRating != "undefined" ? props.averageRating : 0
+  const title = typeof props.title !== "undefined" ? props.title : ""
+  const authors = typeof props.authors !== "undefined" ? props.authors : ""
+  const description = typeof props.description !== "undefined" ? props.description : ""
+  const imageLinks = typeof props.imageLinks !== "undefined" ? props.imageLinks : ""
+  const averageRating = typeof props.averageRating !== "undefined" ? props.averageRating : 0
     const handleAddToCart = () => {
       props.addToCart(props)
     }
