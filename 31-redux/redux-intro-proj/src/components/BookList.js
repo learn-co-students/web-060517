@@ -7,7 +7,7 @@ const BookList = ({ books, addBook }) => {
 
     return (
       <Item.Group divided key={index}>
-        <BookCard  {...book} addBook={addBook}/>
+        <BookCard  {...book}/>
       </Item.Group>
     )
   })

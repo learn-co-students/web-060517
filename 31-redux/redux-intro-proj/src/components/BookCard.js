@@ -1,11 +1,15 @@
 import React from 'react'
 import { Icon, Rating, Item } from 'semantic-ui-react'
+import { showBook } from '../actions/books'
+import { connect } from 'react-redux'
 
 class BookCard extends React.Component {
 
   handleAdd = () => {
 
-    this.props.addBook(this.props.volumeInfo)
+    // this.props.volumeInfo is each book
+    this.props.showBook(this.props.volumeInfo)
+
   }
 
 
@@ -37,4 +41,17 @@ class BookCard extends React.Component {
     )
   }
 }
-export default BookCard
+
+
+function mapDispatchToProps(dispatch) {
+  // dispatch(showBook())
+  return {
+    showBook: (book) => {
+      dispatch(showBook(book))
+    }
+  }
+}
+
+
+
+export default connect(null, mapDispatchToProps)(BookCard)

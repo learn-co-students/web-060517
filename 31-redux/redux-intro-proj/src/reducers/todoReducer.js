@@ -1,17 +1,4 @@
-function todoReducer(state = { todos: []}, action) {
-  switch (action.type) {
-    case 'ADD_TODO':
-      return Object.assign({}, state, { todos: [
-        ...state.todos,
-        action.payload
-      ]})
-    default:
-      return state
-  }
-}
-
-
-const todos = (state = { todos: []}, action) => {
+const todos = (state = { list: []}, action) => {
   switch (action.type) {
     case 'ADD_TODO':
       return Object.assign({}, state, { todos: [...state.todos, action.payload]})

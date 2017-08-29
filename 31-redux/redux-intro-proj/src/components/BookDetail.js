@@ -1,5 +1,9 @@
 import React from 'react'
 import { Card, Image, Icon, Rating } from 'semantic-ui-react'
+import { connect } from 'react-redux'
+import { addToCart, showBook } from '../actions/books'
+
+import { bindActionCreators } from 'redux'
 
 
 
@@ -10,9 +14,11 @@ const BookDetail = (props) => {
   const imageLinks = typeof props.imageLinks !== "undefined" ? props.imageLinks : ""
   const averageRating = typeof props.averageRating !== "undefined" ? props.averageRating : 0
     const handleAddToCart = () => {
+
       props.addToCart(props)
     }
 
+    console.log("BookDetail", props)
     return (
       <Card>
         <Image src={imageLinks.thumbnail} />
@@ -38,4 +44,22 @@ const BookDetail = (props) => {
     )
 }
 
-export default BookDetail
+
+
+function mapDispatchToProps(dispatch) {
+
+
+// remember that a function is always an object
+
+  // return {
+  //   addCart: (book) => {
+  //     dispatch(addToCart(book))
+  //   }
+  // }
+
+  return bindActionCreators({addToCart: addToCart,showBook}, dispatch)
+}
+
+
+
+export default connect(null, mapDispatchToProps)(BookDetail)
